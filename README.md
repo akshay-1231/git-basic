@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # MyntraSolution
 
 
@@ -12,6 +12,5 @@ This script automates the process of updating the product details in Myntra, a p
 1. Authenticate with Myntra using your Myntra login credentials.
 2. Navigate to the product details page using the provided product URL.
 3. Retrieve the current product details and store them in variables.
-=======
 This is my first repository for java script 
->>>>>>> 4cad42b575d36ec3e546b3a2bbcbddee250aee2a
+
