@@ -12,6 +12,17 @@ app.get("/api/hello", function(req, res) {
     
 });
 
+app.get("/api/thankyou", function(req, res) {
+    var Thanksgiving  = {
+       haapyindex : 100,
+        gift: "toy Car",
+        price: 200.00,
+        product :"smart Tv"
+    }
+    res.send(Thanksgiving);
+    
+});
+
 app.listen(3000, function() {
   console.log("Server is running on port 3000");
 });
