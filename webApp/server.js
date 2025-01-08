@@ -2,6 +2,7 @@ const express = require("express");
 
 console.log("hello world");
 var app = express();
+app.use(express.json());
 app.get("/api/hello", function(req, res) {
     var product  = {
         id: 1,
@@ -11,6 +12,47 @@ app.get("/api/hello", function(req, res) {
     res.send(product);
     
 });
+
+app.post("/api/addproduct", function (req, res) {
+
+  const data = req.body
+
+  try {
+
+    console.log(data);
+
+    productRepo.addProduct(data);
+
+    res.status(201).send("Product added")
+
+  } catch (err) {
+
+    console.log(err)
+
+  }
+
+});
+
+app.get("/api/getbyid/:id", function (req, res) {
+
+  var data = req.params.id
+
+  try {
+
+    var product1 = productRepo.getProductById(data)
+
+    console.log(product1);
+
+    res.status(200).send(product1);
+
+  } catch (err) {
+
+    console.log(err)
+
+  }
+
+});
+
 
 app.get("/api/thankyou", function(req, res) {
     var Thanksgiving  = {
